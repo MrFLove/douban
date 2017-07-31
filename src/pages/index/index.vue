@@ -32,15 +32,23 @@
     },
     methods: {
       getNews (pageNumber) {
-        //http request
-        let data = {
-          pageSize: 10,
-          pageNum: 1
-        }
-        this.$axios.get('/axiosapi/v2/book/1220562').then(function(res){
-          console.log(res)
+        this.$axios.get('/list/api/FABAO_WEBSITE/news/getnewslist',{
+          params:{
+            'pageSize': 7,
+            'pageNumber': 4
+          }
         })
-        // this.$axios('http://www.fabao.cn/api/FABAO_WEBSITE/news/getnewslist')
+        .then(function(response){
+          console.log(response);
+        })
+        .catch(function(err){
+          console.log(err);
+        });
+        
+        
+
+
+         // http://www.fabao.cn/api/FABAO_WEBSITE/news/getnewslist?nonce=1494326633000&pageSize=7&pageNumber=143
       }
     }
 

@@ -7,8 +7,7 @@ import BVA from '@/pages/bva/bva'
 import Book from '@/pages/bva/book'
 import Mine from '@/pages/mine/mine'
 Vue.use(Router);
-
-Axios.defaults.baseURL = '/axiosapi';
+//引用代理
 Vue.prototype.$axios = Axios;
 
 export default new Router({

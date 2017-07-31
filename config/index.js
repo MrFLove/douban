@@ -27,13 +27,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/axiosapi': {
-            target: 'https://api.douban.com',
-            changeOrigin: true,
-            pathRewritr: {
-                '^/axiosapi':''
-            }
+      '/list': {
+        target: 'http://www.fabao.cn',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/list': '/list'
         }
+      }
     },
     // CSS Sourcemaps off by defxault because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
